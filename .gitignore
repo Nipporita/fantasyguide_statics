@@ -1,0 +1,8 @@
+# Ignore .psd and .ai files in frontend/statics/images target directory
+/images/*.psd
+/images/*.ai
+
+# Ignore specific folders in frontend/statics/images target directory
+/images/素材/
+/images/vfx/
+/images/color_it_up_images/
