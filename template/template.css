@@ -145,7 +145,7 @@ body {
     padding: 0;
     background-color: var(--uni-background-color);
 
-    --fantasy-guide-logo: url("https://fantasyguide.cn/images/touhouFantasyGuideLOGO.svg");
+    --fantasy-guide-logo: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/touhouFantasyGuideLOGO.svg");
 }
 
 button {
@@ -238,7 +238,7 @@ button:hover {
 .login_wrap {
     height: 70%;
     aspect-ratio: 1;
-    background-image: url(https://fantasyguide.cn/images/background_image_1.svg);
+    background-image: url(https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/background_image_1.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -254,7 +254,7 @@ button:hover {
     display: block;
     position: absolute;
     right: 2px;
-    background-image: url(https://fantasyguide.cn/images/touhou_cover.svg);
+    background-image: url(https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/touhou_cover.svg);
     background-position-x: right;
     background-position-y: center;
     background-repeat: no-repeat;
@@ -305,7 +305,7 @@ button:hover {
     top: var(--top-left);
     left: var(--top-left);
     aspect-ratio: 1;
-    background-image: url(https://fantasyguide.cn/images/background_image_2.svg);
+    background-image: url(https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/background_image_2.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -327,7 +327,7 @@ button:hover {
     content: "";
     width: 100%;
     height: 100%;
-    background-image: url(https://fantasyguide.cn/images/background_image_1.svg);
+    background-image: url(https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/background_image_1.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -395,7 +395,7 @@ button:hover {
     aspect-ratio: 1;
     top: 0;
     left: 0;
-    background-image: url(https://fantasyguide.cn/images/background_image_1.svg);
+    background-image: url(https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/background_image_1.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -553,7 +553,7 @@ body.dark #nav_bar > a::before {
     left: 0;
     bottom: 0;
     /* background-color: var(--uni-background-color); */
-    background-image: url("https://fantasyguide.cn/images/imperial_coin_pattern.svg");
+    background-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/imperial_coin_pattern.svg");
     background-repeat: repeat;
     background-size: var(--container_background_size);
     z-index: -100;
@@ -658,7 +658,7 @@ body.dark #nav_bar > a::before {
     position: absolute;
     width: calc(110rem / 16);
     height: calc(110rem / 16);
-    background-image: url("https://fantasyguide.cn/images/focus.svg");
+    background-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/focus.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: calc(110rem / 16);
@@ -855,7 +855,7 @@ body.dark #nav_bar > a::before {
     left: 0;
     -webkit-transition: background-position 0s linear .4s;
     transition: background-position 0s linear .4s;
-    background: url("https://fantasyguide.cn/images/imperial_coin_pattern.svg") repeat 0 0;
+    background: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/imperial_coin_pattern.svg") repeat 0 0;
     background-position: calc(var(--container_background_size) * -8) 0px;
     background-size: var(--container_background_size);
     width: 100%;
@@ -920,7 +920,7 @@ ul.about_link {
     background: black;
     content: "";
     --image-mask: url(
-    https://fantasyguide.cn/images/right_arrow.svg);
+    https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/right_arrow.svg);
     -webkit-mask-image: var(--image-mask);
     -webkit-mask-position: center;
     -webkit-mask-size: 1.5rem;
@@ -979,7 +979,7 @@ footer a {
 #police::before {
     content: "";
     display: inline-block;
-    background-image: url("https://fantasyguide.cn/images/备案图标.png");
+    background-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/备案图标.png");
     background-position: center bottom;
     background-size: 0.8rem;
     background-repeat: no-repeat;
@@ -1074,7 +1074,7 @@ div.fantasy_guide_div_1 {
     margin: 0;
     background-color: var(--uni-anti-background-color);
     --image-mask: url(
-    "https://fantasyguide.cn/images/Yin.svg");
+    "https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/Yin.svg");
     -webkit-mask-image: var(--image-mask);
     -webkit-mask-position: center;
     -webkit-mask-size: 1.25rem;
@@ -1104,7 +1104,7 @@ div.fantasy_guide_div_1 {
     margin: 0;
     background-color: var(--uni-anti-background-color);
     --image-mask: url(
-    "https://fantasyguide.cn/images/Yang.svg");
+    "https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/Yang.svg");
     -webkit-mask-image: var(--image-mask);
     -webkit-mask-position: center;
     -webkit-mask-size: 1.25rem;
@@ -1190,11 +1190,11 @@ div.fantasy_guide_div_1 {
 }
 
 .sukima_close > *::before {
-    background-image: url("https://fantasyguide.cn/images/sukima_close.svg");
+    background-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/sukima_close.svg");
 }
 
 .sukima_open > *::before {
-    background-image: url("https://fantasyguide.cn/images/sukima_open.svg");
+    background-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/sukima_open.svg");
 }
 
 /* 移动适配 */
