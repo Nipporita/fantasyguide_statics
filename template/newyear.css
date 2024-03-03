@@ -1,0 +1,22 @@
+/* 通常配色方案 */
+
+body {
+
+    /* 通配 */
+
+    --uni-background-color: white;
+    --uni-text-color: red;
+    --uni-border-color: red;
+    --uni-shadow-border: red;
+    
+    --uni-anti-background-color: red;
+    --uni-anti-text-color: white;
+
+    --fantasy-guide-div-1-border-image: url("https://fantasyguide.cn/images/border_image_1_white_newyear.png");
+    --fantasy-guide-div-1-button-border-image: url("https://fantasyguide.cn/images/border_image_1_newyear.png");
+
+    --main-side-bar-before-background-image: url("https://fantasyguide.cn/images/background_image_1_newyear.svg");
+
+    /* 细节 */
+    --nav-bar-shadow-color: rgba(255, 0, 0, 0.3)
+}

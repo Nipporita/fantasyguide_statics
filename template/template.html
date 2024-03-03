@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset = "utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <title>幻想指南</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" />
+        <!-- Lite version -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css" />
+        <!-- TC version -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css" />
+        <!-- Screen version -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" />
+        <link rel="manifest" href="/images/favicon/site.webmanifest">
+        <!-- <link rel="stylesheet" href="/template/newyear.css"> -->
+        <link rel="stylesheet" href="/template/normal.css">
+        <link rel="stylesheet" href="/template/abnormal.css">
+    </head>
+    <body>
+        <div id="container">
+            <header id="header">
+                <div class="header_content">
+                    <h1>幻想指南</h1>
+                    <h3 id="AQ">距離阿求的寿命完全枯竭，還有?天</h3>
+                </div>
+                <div class="mobile_header">
+                    <div id="open_menu" class="open_menu">
+                        <a href="#main_side_bar">☰</a>
+                    </div>
+                </div>
+                <div id="login_template" class="login_wrap">
+                    <div id="to_login">
+                        <a id="header_to_register" class="login_link">注册</a>
+                        <hr>
+                        <a id="header_to_login" class="login_link">登录</a>
+                    </div>
+                    <div id="has_login" style="display:none">
+                        <div class="login_content">
+                            <div class="user_profile">
+                                <img src="/backend/login/get_user_pic">
+                            </div>
+                            <div class="user_menu">
+                                <div class="user_menu_block"><div id="username_block"></div></div>
+                                <div class="user_menu_block"><a href="/homepage/">个人<br>空间</a></div>
+                                <div class="user_menu_block"><a onclick="logout()" class="login_link">注销</a></div>
+                                <!--<div class="user_menu_block"></div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="nav_bar">
+                    <a onclick="changeMode(this)" class="button" title="切换主题"></a>
+                    <ul>
+                        <li><a href="/">主页</a></li>
+                        <li><a href="/about/">关于</a></li>
+                        <li><a href="/medle/">Medle</a></li>
+                        <li><a href="/color_it_up/">填色游戏</a></li>
+                    </ul>
+                </div>
+            </header>
+            <div id="content_wrap">
+                <div id="main_side_bar">
+                    <div class="fantasy_guide_div_1">
+                        <h1>NEWS</h1>
+                        <a class="closed_yin_yang"><hr></a>
+                        <div class="main_content_container">
+                            <div class="main_content_content">
+                                <div id="news_content" class="inside_side_bar_container">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fantasy_guide_div_1">
+                        <h1>DAILY</h1>
+                        <a class="closed_yin_yang"><hr></a>
+                        <div class="main_content_container">
+                            <div class="main_content_content">
+                                <div class="inside_side_bar_container">
+                                    <div class="daily_content">
+                                        <h2>1、每日推荐音乐</h2>
+                                        <div id="wyy_iframe_container">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fantasy_guide_div_1">
+                        <h1>PROJECT</h1>
+                        <a class="closed_yin_yang"><hr></a>
+                        <div class="main_content_container">
+                            <div class="main_content_content">
+                                <div class="inside_side_bar_container">
+                                    <ul class="about_link">
+                                        <li><a href="https://fantasyguide.cn/medle" target="_blank"><span>Medle</span></a></li>
+                                        <li><a href="/color_it_up/"><span>填色游戏</span></a></li>
+                                    </ul>
+                                    <div class="medle_content" style="display: none">
+                                        <h2>1、Medle</h2>
+                                        <a href="https://fantasyguide.cn/medle/" target="_blank">点此体验</a>
+                                        给定一句歌的节奏，但是不给音高。根据节奏型尝试为每个节奏点赋予音高，最终复现这一句的旋律。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fantasy_guide_div_1">
+                        <h1>ABOUT</h1>
+                        <a class="closed_yin_yang"><hr></a>
+                        <div class="main_content_container">
+                            <div class="main_content_content">
+                                <div class="inside_side_bar_container">
+                                    <ul class="about_link">
+                                        <li><a href="/about/#what_is_touhou"><span>东方Project</span></a></li>
+                                        <li><a href="/about/#what_is_touhou_fantasy_guide"><span>东方幻想指南</span></a></li>
+                                        <li><a href="/about/#what_is_pdot_studio"><span>P大点工作室</span></a></li>
+                                    </ul>
+                                    <div class="powered_by">
+                                        Powered by <img src="https://fantasyguide.cn/images/PStudio.png" alt = "Logo of the Studio (need to be confirm)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="close_menu" href="###"></a>
+                    <div id="main_side_bar_mask"></div>
+                </div>
+            </div>
+            <div id="footer_wrap">
+            </div>
+            <div class="main_background"></div>
+        </div>
+    </body>
+    <script>
+        /* 恶趣味 */
+
+        // 获取包含问号的文本内容
+        var AQ = document.getElementById('AQ');
+        var AQ_text = AQ.textContent;
+
+        // 定义更新文本的函数
+        function updateText() {
+        // 生成一个随机数，例如在1到100之间
+        var randomNum = Math.floor(Math.random() * 999) + 1;
+
+        // 将文本内容中的问号替换为随机数
+        var newText = AQ_text.replace('?', randomNum);
+
+        // 更新 h3 元素的文本内容
+        AQ.textContent = newText;
+        }
+
+        // 每隔一定时间调用更新函数，例如每5秒
+        setInterval(updateText, 50); // 时间单位为毫秒，这里是5秒
+    </script>
+    <script>
+        // 选择符合条件的所有元素
+        var elements = document.querySelectorAll("#main_side_bar > .fantasy_guide_div_1 > a");
+
+        let lastClickTime = 0;
+        const clickDelay = 2000; // 2秒
+
+        // 遍历匹配的元素
+        elements.forEach(function(element) {
+            element.onclick = function() {
+                yin_yang_open_and_close(element)
+            }
+        });
+
+        function yin_yang_open_and_close(self) {
+            
+            const currentTime = Date.now();
+
+            var main_side_bar = document.getElementById("main_side_bar");
+            var main_content = document.getElementById("main_content")
+
+            main_content.classList.add("on_load")
+
+            if (self.classList.contains('closed_yin_yang')) {
+                if (currentTime - lastClickTime < clickDelay) {
+                    return
+                }
+                lastClickTime = currentTime; // 更新最后一次点击时间
+                self.classList.remove('closed_yin_yang')
+
+                main_side_bar.classList.add("side_bar_is_open")
+
+                if (main_content) {
+                    main_content.classList.add("main_content_shrink");
+                }
+
+                var other_chunks = document.querySelectorAll("#main_side_bar > .fantasy_guide_div_1");
+                other_chunks.forEach(function (element) {
+                    if (element !== self.parentElement) {
+                        element.classList.add('disappear')
+                    }
+                    else {
+                        element.classList.add('to_left_top')
+                        element.classList.remove('back_from_left_top')
+                    }
+                });
+            } else {
+                self.classList.add('closed_yin_yang')
+                main_side_bar.classList.remove("side_bar_is_open")
+
+                if (main_content) {
+                    main_content.classList.remove("main_content_shrink")
+                }
+                
+
+                var other_chunks = document.querySelectorAll("#main_side_bar > .fantasy_guide_div_1");
+                other_chunks.forEach(function (element) {
+                    if (element !== self.parentElement) {
+                        element.classList.remove('disappear')
+                    }
+                    else {
+                        element.classList.remove('to_left_top')
+                        element.classList.add('back_from_left_top')
+                        setTimeout(function () {
+                            // 从元素中删除特定的类
+                            element.classList.remove('back_from_left_top');
+                        }, clickDelay); // clickDelay
+                    }
+                });
+
+                lastClickTime = currentTime; // 更新最后一次点击时间
+            }
+        }
+
+        var close_menu = document.querySelectorAll(".close_menu")
+
+        close_menu.forEach(function(each_close_menu) {
+            each_close_menu.onclick = function() {
+                var element = document.querySelector("#main_side_bar > .to_left_top > a")
+                if (element !== null){
+                    element.click()
+                }
+            }
+        })
+    </script>
+    <script>
+        var registerLink = document.getElementById('header_to_register');
+        if (registerLink) {
+            registerLink.href = '/login/?goto=register&redirect_url=' + encodeURIComponent(window.location.href);
+        }
+        
+        var loginLink = document.getElementById('header_to_login');
+        if (loginLink) {
+            loginLink.href = '/login/?goto=login&redirect_url=' + encodeURIComponent(window.location.href);
+        }
+    </script>
+    <script>
+        if (Math.random() <= 0.01) {
+            var header = document.getElementById('header');
+            header.style.backgroundImage = "url(https://fantasyguide.cn/images/touhouFantasyGuideLOGO_glitch.svg)";
+
+            $("<link>").attr({
+                rel:  "stylesheet",
+                type: "text/css",
+                href: "../template/etalpmet.css"
+            }).appendTo("head");
+        }
+    </script>
+    <script src="../template/template.js"></script>
+    <script>
+        // 暂      
+        async function think() {
+            while (true) {await new Promise(
+                    resolve => setTimeout(resolve, 1000));}
+        }
+        async function ask() {await new Promise(() => {})}
+        async function pku() {
+            const answer = ask(); await think(); await answer;
+        }
+        pku()
+    </script>
+    <script>
+        function isPhone() {
+            return /Mobile|Android/i.test(navigator.userAgent)
+        }
+
+        function getRandomRotation() {
+            return Math.floor(Math.random() * 41) - 20; // 随机旋转角度在±15度之间
+        }
+
+        function getRandomPosition() {
+            return 100 * Math.random(); // 随机位置
+        }
+
+        function getRandomDelay() {
+            return Math.random() * 6
+        }
+
+        function setDivinityMain() {
+            var container = document.getElementById("container")
+
+            if(container) {
+                N = isPhone() ? 50 : 300;
+                container.style.opacity = 1;
+                for (let i = 0; i < N; i++) {
+                    const divinity = document.createElement('div');
+                    divinity.className = 'divinity';
+                    divinity.style.transform = `rotate(${getRandomRotation()}deg)`;
+                    divinity.style.left = `calc(${getRandomPosition()}% - 8%)`;
+                    divinity.style.top = `calc(${getRandomPosition()}% - 6%)`;
+                    divinity.style.animationDelay = `${getRandomDelay() + 0.6}s`;
+                    divinity.style.zIndex = -1;
+                    container.appendChild(divinity);
+                }
+            }
+            else {
+                setTimeout(setDivinityMain, 10)
+            }
+        }
+    </script>
+    <script>
+        function changeMode(e) {
+            document.body.classList.toggle("dark")
+            if (document.body.classList.contains("dark")) {
+                e.title = "切换至桑尼"
+                setCookie("dark_theme", "dark")
+            } else {
+                e.title = "切换至露娜"
+                setCookie("dark_theme", "light")
+            }
+        }
+    </script>
+</html>

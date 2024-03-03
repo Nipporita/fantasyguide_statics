@@ -1,0 +1,60 @@
+/* 通常配色方案 */
+
+body {
+
+    /* 通配 */
+
+    --uni-background-color: white;
+    --uni-text-color: black;
+    --uni-border-color: black;
+    --uni-shadow-border: black;
+    
+    --uni-anti-background-color: black;
+    --uni-anti-text-color: white;
+
+    --fantasy-guide-div-1-border-image: url("https://fantasyguide.cn/images/border_image_1_white.png");
+    --fantasy-guide-div-1-button-border-image: url("https://fantasyguide.cn/images/border_image_1.png");
+
+    --main-side-bar-before-background-image: url("https://fantasyguide.cn/images/background_image_1.svg");
+
+    /* 细节 */
+    --nav-bar-shadow-color: rgba(0,0,0,0.6);
+
+    --footer-background-image: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0))
+}
+
+body.dark {
+    /* 通配 */
+
+    --uni-background-color: #222;
+    --uni-text-color: #fdfdfd;
+    --uni-border-color: #fdfdfd;
+    --uni-shadow-border: #fdfdfd;
+    
+    --uni-anti-background-color: #fdfdfd;
+    --uni-anti-text-color: #222;
+
+    --fantasy-guide-div-1-border-image: url("https://fantasyguide.cn/images/border_image_1_white_dark.png");
+    --fantasy-guide-div-1-button-border-image: url("https://fantasyguide.cn/images/border_image_1_dark.png");
+
+    --main-side-bar-before-background-image: url("https://fantasyguide.cn/images/background_image_1_dark.svg");
+
+    /* 细节 */
+    --nav-bar-shadow-color: rgba(255,255,255,0.6);
+
+    --footer-background-image: linear-gradient(to top, rgba(34, 34, 34, 1), rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0))
+}
+
+body.dark .main_background {
+    filter: invert(1);
+}
+
+body.dark .login_link,
+body.dark .login_link:active,
+body.dark .login_linkvisited {
+    color: black;
+}
+
+/* body.dark #main_side_bar > .fantasy_guide_div_1::before {
+    color: black;
+} */

@@ -1,0 +1,21 @@
+body {
+    --fantasy-guide-logo: url("https://i.postimg.cc/RVhqrMF9/touhou-Fantasy-Guide-LOGO.png");
+
+    --fantasy-guide-div-1-border-image: url("https://i.postimg.cc/2SzYpGTW/border-image-1-white.png");
+    --fantasy-guide-div-1-button-border-image: url("https://i.postimg.cc/021xnPwc/border-image-1.png");
+
+    --main-side-bar-before-background-image: url("https://fantasyguide.cn/images/background_image_1.svg");
+
+}
+
+body.dark {
+    --fantasy-guide-div-1-border-image: url("https://i.postimg.cc/pLqHPj16/border-image-1-white-dark.png");
+    --fantasy-guide-div-1-button-border-image: url("https://i.postimg.cc/bN0PFW08/border-image-1-dark.png");
+
+    --main-side-bar-before-background-image: url("https://fantasyguide.cn/images/background_image_1_dark.svg");
+}
+
+/* https://i.postimg.cc/021xnPwc/border-image-1.png
+https://i.postimg.cc/bN0PFW08/border-image-1-dark.png
+https://i.postimg.cc/2SzYpGTW/border-image-1-white.png
+https://i.postimg.cc/pLqHPj16/border-image-1-white-dark.png */
