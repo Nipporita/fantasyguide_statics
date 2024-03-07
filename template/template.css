@@ -7,7 +7,7 @@
 /* 字体区 */
 @font-face {
     font-family: "YanSong";
-    src: url("https://fantasyguide.cn/fonts/ZaoZiGongFangYanSongTi-1.otf") format("opentype");
+    src: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/fonts/ZaoZiGongFangYanSongTi-1.otf") format("opentype");
 }
 
 @font-face {
