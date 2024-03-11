@@ -29,6 +29,7 @@
     src: url("https://fantasyguide.cn/fonts/FOT-LYRA_STD_DB.OTF") format("opentype");
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
 
 /*
 ==============================
@@ -136,6 +137,7 @@ button:hover {
 #main_content.on_load {
     transition: padding-left var(--side_bar_spread_time) ease, width var(--side_bar_spread_time) ease;
     min-height: calc(100vh - 140rem / 16 - 60px - 0.667px - var(--bottom-offset));
+    overflow: hidden;
 }
 
 @media (min-width: 769px) {

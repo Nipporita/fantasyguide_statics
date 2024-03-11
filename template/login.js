@@ -59,7 +59,6 @@ function logout() {
             document.getElementById("to_login").style.display=""
             document.getElementById("has_login").style.display="none"
             location.reload()
-    
         },
         error: function(xhr, status, error) {
             // 处理请求错误
