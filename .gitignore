@@ -5,4 +5,4 @@
 # Ignore specific folders in frontend/statics/images target directory
 /images/素材/
 /images/vfx/
-/images/color_it_up_images/
+# /images/color_it_up_images/
