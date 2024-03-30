@@ -302,7 +302,7 @@ button:hover {
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    --image-mask: url(    https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/background_image_mask.svg);
+    --image-mask: url(https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/background_image_mask.svg);
     --mask-size: 70%;
     -webkit-mask-image: var(--image-mask);
     -webkit-mask-position: center;
