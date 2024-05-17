@@ -33,6 +33,19 @@
 
 /*
 ==============================
+仓耳与墨W03
+==============================
+Copy from http://etinjat.wikidot.com/typeface-cn
+==============================
+*/
+
+@font-face { font-family: '仓耳与墨W03'; 
+    font-style: normal; font-weight: 400;font-display: swap;
+    src: url('https://fastly.jsdelivr.net/gh/Etinjat/FONT@Tsanger/仓耳与墨W03.woff2') format('woff2');
+}
+
+/*
+==============================
 霞骛文楷
 ==============================
 Copy from http://etinjat.wikidot.com/typeface-cn
