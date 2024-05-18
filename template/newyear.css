@@ -12,10 +12,10 @@ body {
     --uni-anti-background-color: red;
     --uni-anti-text-color: white;
 
-    --fantasy-guide-div-1-border-image: url("https://fantasyguide.cn/images/border_image_1_white_newyear.png");
-    --fantasy-guide-div-1-button-border-image: url("https://fantasyguide.cn/images/border_image_1_newyear.png");
+    --fantasy-guide-div-1-border-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/border_image_1_white_newyear.png");
+    --fantasy-guide-div-1-button-border-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/border_image_1_newyear.png");
 
-    --main-side-bar-before-background-image: url("https://fantasyguide.cn/images/background_image_1_newyear.svg");
+    --main-side-bar-before-background-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/background_image_1_newyear.svg");
 
     /* 细节 */
     --nav-bar-shadow-color: rgba(255, 0, 0, 0.3)

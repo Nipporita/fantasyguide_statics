@@ -12,10 +12,10 @@ body {
     --uni-anti-background-color: black;
     --uni-anti-text-color: white;
 
-    --fantasy-guide-div-1-border-image: url("https://fantasyguide.cn/images/border_image_1_white.png");
-    --fantasy-guide-div-1-button-border-image: url("https://fantasyguide.cn/images/border_image_1.png");
+    --fantasy-guide-div-1-border-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/border_image_1_white.png");
+    --fantasy-guide-div-1-button-border-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/border_image_1.png");
 
-    --main-side-bar-before-background-image: url("https://fantasyguide.cn/images/background_image_1.svg");
+    --main-side-bar-before-background-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/background_image_1.svg");
 
     /* 细节 */
     --nav-bar-shadow-color: rgba(0,0,0,0.6);
@@ -34,10 +34,10 @@ body.dark {
     --uni-anti-background-color: #fdfdfd;
     --uni-anti-text-color: #222;
 
-    --fantasy-guide-div-1-border-image: url("https://fantasyguide.cn/images/border_image_1_white_dark.png");
-    --fantasy-guide-div-1-button-border-image: url("https://fantasyguide.cn/images/border_image_1_dark.png");
+    --fantasy-guide-div-1-border-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/border_image_1_white_dark.png");
+    --fantasy-guide-div-1-button-border-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/border_image_1_dark.png");
 
-    --main-side-bar-before-background-image: url("https://fantasyguide.cn/images/background_image_1_dark.svg");
+    --main-side-bar-before-background-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/background_image_1_dark.svg");
 
     /* 细节 */
     --nav-bar-shadow-color: rgba(255,255,255,0.6);
