@@ -31,7 +31,7 @@
         top: calc(2 * 7.6875rem + 4 * 0.8125rem - 30px + 48px);
         right: 0;
         opacity: 1;
-        background: black;
+        background: var(--uni-text-color);
         content: "";
         -webkit-mask-image: var(--image-mask);
         -webkit-mask-position: center;
