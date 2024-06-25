@@ -91,7 +91,6 @@ function do_after_login_check(templateDOM, contentDOM, result) {
     }
 
     var dark_theme = getCookie("dark_theme");
-    document.querySelector
     var theme_changing_button = templateDOM.querySelector("#nav_bar > a")
 
     if (dark_theme === "" || dark_theme === "light") {
