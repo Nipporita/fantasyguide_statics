@@ -29,6 +29,31 @@
     src: url("https://fantasyguide.cn/fonts/FOT-LYRA_STD_DB.OTF") format("opentype");
 }
 
+@font-face {
+    font-family: "DYS";
+    src: url("https://fantasyguide.cn/fonts/FZDYSJW.TTF") format("truetype");
+}
+
+@font-face {
+    font-family: "ZZOldMincho";
+    src: url("https://fantasyguide.cn/fonts/FZFWZhuZiAOldMinchoR.TTF") format("truetype");
+}
+
+@font-face {
+    font-family: "JinLing";
+    src: url("https://fantasyguide.cn/fonts/FZJinL-L_GBJF.TTF") format("truetype");
+}
+
+@font-face {
+    font-family: "FZSHJW";
+    src: url("https://fantasyguide.cn/fonts/FZSHJW.TTF") format("truetype");
+}
+
+@font-face {
+    font-family: "YuMincho";
+    src: url("https://fantasyguide.cn/fonts/YuMincho_+36p_Kana_Extrabold.otf") format("opentype");
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
 
 /*
@@ -205,6 +230,23 @@ button:hover {
     align-content: flex-start;
     justify-content: center;
     align-items: flex-start;
+}
+
+.omikuji_wrap {
+    display: block;
+    position: fixed;
+    display: flex;
+    top: -68vh;
+    aspect-ratio: 1 / 3.1415926;
+    height: 70vh;
+    background: white;
+    right: 20%;
+    z-index: 1000;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.8);
+    flex-direction: column;
+    font-size: 0.9vh;
+    /* background: linear-gradient(0deg, red, white, red, white, red, white, red); */
+    transition: top 0.5s ease-in-out 0.3s;
 }
 
 /* 登录框定义 */
@@ -1338,4 +1380,246 @@ div.fantasy_guide_div_1 {
         --image-mask: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.1) 33%, black);;
         right: calc(-1px + 140rem / 16 / 2 + 0.667px);
     }
+}
+
+
+.omikuji_hanzi {
+    transform: rotate(90deg);
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    width: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.omikuji_number_wrap {
+    margin: 2.5vh;
+    padding: 0.6vh;
+    background: lightgray;
+    flex-shrink: 0;
+    flex-grow: 0;
+    height: calc(70vh / 6 - 2 * 3.1vh);
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.omikuji_number {
+    border: 0.3vh solid gray;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 1vh;
+    position: relative;
+}
+
+.omikuji_content_wrap {
+    flex-grow: 1;
+    padding: 1.2vh;
+    --border-thick: 0.3vh gray solid;
+    --border-thin: 0.1vh gray solid;
+    display: flex;
+    height: calc(100% * 5 / 6);
+}
+
+.omikuji_content_left_right_border_1 {
+    border-left: var(--border-thick);
+    border-right: var(--border-thick);
+    flex-grow: 1;
+    display: flex;
+}
+
+.omikuji_content_left_right_border_2 {
+    border-left: var(--border-thin);
+    border-right: var(--border-thin);
+    flex-grow: 1;
+    display: flex;
+    margin: 0 0.1vh;
+}
+
+.omikuji_content_up_bottom_border_1 {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 0.4vh 0;
+    border-top: var(--border-thick);
+    border-bottom: var(--border-thick);
+}
+
+.omikuji_content_up_bottom_border_2 {
+    display: flex;
+    flex-grow: 1;
+    margin: 0.1vh 0;
+    border-top: var(--border-thin);
+    border-bottom: var(--border-thin);
+    flex-direction: column;
+    align-items: center;
+}
+
+.omikuji_omikuji {
+    font-family: 'YuMincho';
+    font-size: 3vh;
+}
+
+.omikuji_bangou {
+    font-family: 'YuMincho';
+    font-size: 1vh;
+}
+
+div#omikuji_fan {
+    margin-left: 0.8vh;
+}
+
+.omikuji_number::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0.1vh;
+    right: 0.1vh;
+    top: 0.1vh;
+    bottom: 0.1vh;
+    border: 0.1vh solid gray;
+    filter: opacity(0.5);
+    pointer-events: none;
+}
+
+div#omikuji_num {
+    font-size: 1.5vh;
+}
+
+div#omikuji_di {
+    margin-right: 0.1vh;
+}
+
+div#omikuji_basic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+div#omikuji_bangou_wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    font-family: 'YuMincho';
+    font-size: 2.7vh;
+    border-bottom: var(--border-thin);
+}
+
+div#omikuji_name_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-bottom: var(--border-thick);
+}
+
+div#omikuji_ability {
+    border-bottom: var(--border-thin);
+    margin-bottom: 0.1vh;
+    padding-bottom: 0.8vh;
+    font-family: sans-serif !important;
+    font-weight: 500;
+}
+
+#omikuji_name_wrap > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'YuMincho';
+    line-height: 1.3;
+    font-size: 1vh;
+}
+
+div#omikuji_poem {
+    writing-mode: vertical-rl;
+    white-space: normal;
+    height: 5.1em;
+    width: 100%;
+    margin: 1vh 0 1vh 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-shrink: 0;
+    font-family: 'ZZOldMincho';
+    font-weight: bold;
+    font-size: 2vh;
+    justify-content: flex-start;
+}
+
+div#omikuji_fortune_text_1, div#omikuji_fortune_text_2 {
+    writing-mode: vertical-rl;
+    white-space: normal;
+    line-height: 1;
+    height: 50%;
+    width: 95%;
+    padding: 0.8vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div#omikuji_fortune_text {
+    display: flex;
+    height: 20vh;
+    width: 90%;
+    flex-grow: 1;
+    flex-direction: column;
+    font-family: 'JinLing';
+    align-items: center;
+}
+
+div#omikuji_name {
+    font-size: 2.3vh;
+}
+
+div#omikuji_title {
+    padding-top: 0.8vh;
+}
+
+#omikuji_bangou_wrap > div {
+    flex-grow: 1.3;
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    align-items: center;
+    /* width: calc((100% - 0.1vh) / 2); */
+    line-height: 1.7;
+}
+
+div#omikuji_bangou {
+    border-right: var(--border-thin);
+    min-width: 50%;
+    flex-grow: 1.5;
+}
+
+.omikuji_inner_text {
+    font-size: 1.0vh;
+    text-indent: -3em;
+    padding-top: 3em;
+    line-height: 1.5;
+}
+
+.omikuji_wrap hr {
+    margin: 0;
+    width: 100%;
+    border-width: 0.05vh;
+    border-color: lightgray;
+    box-sizing: border-box;
+}
+
+span.omikuji_temp {
+    font-size: 0.6em;
+}
+
+.omikuji_wrap:hover, .omikuji_wrap:focus {
+    top: 0;
+    transition: top 0.5s ease-in-out;
 }

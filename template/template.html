@@ -30,6 +30,58 @@
                     <h1>幻想指南</h1>
                     <h3 id="AQ">距離阿求的寿命完全枯竭，還有?天</h3>
                 </div>
+                <div class="omikuji_wrap">
+                    <div class="omikuji_number_wrap">
+                        <div class="omikuji_number">
+                            <div id="omikuji_di" class="omikuji_hanzi omikuji_bangou">
+                                第
+                            </div>
+                            <div id="omikuji_num" class="omikuji_hanzi omikuji_bangou"></div>
+                            <div id="omikuji_fan" class="omikuji_hanzi omikuji_bangou">
+                                番
+                            </div>
+                            <div id="omikuji_yu" class="omikuji_hanzi omikuji_omikuji">
+                                御
+                            </div>
+                            <div id="omikuji_shen" class="omikuji_hanzi omikuji_omikuji">
+                                神
+                            </div>
+                            <div id="omikuji_qian" class="omikuji_hanzi omikuji_omikuji">
+                                籤
+                            </div>
+                        </div>
+                    </div>
+                    <div class="omikuji_content_wrap">
+                        <div class="omikuji_content_left_right_border_1">
+                            <div class="omikuji_content_left_right_border_2">
+                                <div class="omikuji_content_up_bottom_border_1">
+                                    <div class="omikuji_content_up_bottom_border_2">
+                                        <div id="omikuji_basic">
+                                            <div id="omikuji_bangou_wrap">
+                                                <div id="omikuji_bangou"></div>
+                                                <div id="omikuji_fortune"></div>
+                                            </div>
+                                            <div id="omikuji_name_wrap">
+                                                <div id="omikuji_title"></div>
+                                                <div id="omikuji_name"></div>
+                                                <div id="omikuji_ability"></div>
+                                            </div>
+                                        </div>
+                                        <div id="omikuji_poem">
+                                            <!-- ＫＯきざはし金陵Ｂ Bold -->
+                                        </div>
+                                        <hr>
+                                        <div id="omikuji_fortune_text">
+                                            <div id="omikuji_fortune_text_1"></div>
+                                            <hr>
+                                            <div id="omikuji_fortune_text_2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="mobile_header">
                     <div id="open_menu" class="open_menu">
                         <a href="#main_side_bar">☰</a>
@@ -139,6 +191,7 @@
             <div class="particle-container"></div>
         </div>
     </body>
+    <script src="https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/template/cookie.js"></script>
     <script>
         /* 恶趣味 */
 
@@ -332,6 +385,87 @@
                 setCookie("dark_theme", "light")
             }
         }
+    </script>
+    <script>
+        var omikujiAll = null;
+
+        function getFormattedDate() {
+            const now = new Date();
+            const yyyy = now.getFullYear();
+            const mm = String(now.getMonth() + 1).padStart(2, '0'); // 月份从 0 开始
+            const dd = String(now.getDate()).padStart(2, '0');
+            return `${yyyy}${mm}${dd}`;
+          }
+
+        $.ajax({
+            url: "/template/omikuji.json",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                omikujiAll = data
+                var today = getFormattedDate();
+                if (today !== docCookies.getItem("omikuji_date")) {
+                    var omikuji_id = Math.floor(Math.random() * 128);
+                    docCookies.setItem("omikuji_id", omikuji_id);
+                    docCookies.setItem("omikuji_date", today);
+                    console.log(today)
+                }
+                loadOmikuji(parseInt(docCookies.getItem("omikuji_id")) + 1);
+            },
+            error: function (xhr, status, error) {
+                console.error("请求失败:", error);
+            }
+        });
+
+        function loadOmikuji(idx) {
+            if (omikujiAll === null) return;
+
+            var omikuji = omikujiAll[idx];
+            
+            const omikujiNum = document.getElementById("omikuji_num");
+            const omikujiBangou = document.getElementById("omikuji_bangou");
+            const omikujiTitle = document.getElementById("omikuji_title");
+            const omikujiName = document.getElementById("omikuji_name");
+            const omikujiAbility = document.getElementById("omikuji_ability");
+            const omikujiPoem = document.getElementById("omikuji_poem");
+            const omikujiFortune = document.getElementById("omikuji_fortune");
+            const omikujiFortuneText1 = document.getElementById("omikuji_fortune_text_1");
+            const omikujiFortuneText2 = document.getElementById("omikuji_fortune_text_2");
+
+            omikujiNum.innerHTML = idx + 1;
+            omikujiBangou.innerHTML = "<span class='omikuji_temp'>第</span>" + (idx + 1) + "<span class='omikuji_temp'>番</span>";
+            omikujiFortune.innerHTML = omikuji[0][1];
+            omikujiTitle.innerHTML = omikuji[1][0];
+            omikujiName.innerHTML = omikuji[1][1];
+            omikujiAbility.innerHTML = omikuji[1][2];
+
+            if (omikuji.length === 2) return;
+
+            // join,把'\n'换成'<br>'
+            omikujiPoem.innerHTML = omikuji[2].filter((s) => {return s!=='\n'}).join('<br>')
+
+            if (omikuji.length === 3) return;
+            loadFortuneText(omikujiFortuneText1, omikuji[3]);
+
+            if (omikuji.length === 4) return;
+            loadFortuneText(omikujiFortuneText2, omikuji[4]);
+        }
+
+        function loadFortuneText(e, data) {
+            for (var i = 0; i < data.length; i++) {
+                var fortuneText = document.createElement("div");
+                fortuneText.classList.add("omikuji_inner_text");
+                console.log(i, data[i])
+                if (typeof data[i] === "string") {
+                    fortuneText.innerHTML = data[i];
+                } else if (typeof data[i] === "object") {
+                    fortuneText.innerHTML = data[i].filter((s) => {return s!=='\n'}).join('<br>')
+                }
+
+                e.appendChild(fortuneText);
+            }
+        }
+
     </script>
     <script>
         const container = document.querySelector('.particle-container');
