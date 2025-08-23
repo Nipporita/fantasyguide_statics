@@ -12,8 +12,8 @@
 
 @font-face {
     font-family: 'AaGothic';
-    src: url('https://fantasyguide.cn/fonts/AaGothic.woff2') format('woff2'),
-        url('https://fantasyguide.cn/fonts/AaGothic.woff') format('woff');
+    src: url('https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/fonts/AaGothic.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/fonts/AaGothic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -21,37 +21,37 @@
 
 @font-face {
     font-family: "JinWenCN";
-    src: url("https://fantasyguide.cn/fonts/金文體W3-GB5.TTC") format("truetype");
+    src: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/fonts/金文體W3-GB5.TTC") format("truetype");
 }
 
 @font-face {
     font-family: "Lyra";
-    src: url("https://fantasyguide.cn/fonts/FOT-LYRA_STD_DB.OTF") format("opentype");
+    src: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/fonts/FOT-LYRA_STD_DB.OTF") format("opentype");
 }
 
 @font-face {
     font-family: "DYS";
-    src: url("https://fantasyguide.cn/fonts/FZDYSJW.TTF") format("truetype");
+    src: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/fonts/FZDYSJW.TTF") format("truetype");
 }
 
 @font-face {
     font-family: "ZZOldMincho";
-    src: url("https://fantasyguide.cn/fonts/FZFWZhuZiAOldMinchoR.TTF") format("truetype");
+    src: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/fonts/FZFWZhuZiAOldMinchoR.TTF") format("truetype");
 }
 
 @font-face {
     font-family: "JinLing";
-    src: url("https://fantasyguide.cn/fonts/FZJinL-L_GBJF.TTF") format("truetype");
+    src: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/fonts/FZJinL-L_GBJF.TTF") format("truetype");
 }
 
 @font-face {
     font-family: "FZSHJW";
-    src: url("https://fantasyguide.cn/fonts/FZSHJW.TTF") format("truetype");
+    src: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/fonts/FZSHJW.TTF") format("truetype");
 }
 
 @font-face {
     font-family: "YuMincho";
-    src: url("https://fantasyguide.cn/fonts/YuMincho_+36p_Kana_Extrabold.otf") format("opentype");
+    src: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/fonts/YuMincho_+36p_Kana_Extrabold.otf") format("opentype");
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
