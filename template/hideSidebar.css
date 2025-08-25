@@ -7,8 +7,8 @@
         transition: transform 0.5s 0.5s, padding-left var(--side_bar_spread_time) ease, width var(--side_bar_spread_time) ease;
     }
 
-    .side_bar_is_open#main_side_bar + #main_content,
-    #main_side_bar:hover + #main_content {
+    .side_bar_is_open#main_side_bar ~ * #main_content,
+    #main_side_bar:hover ~ * #main_content {
         transform: translate(0, 0);
         transition: transform 0.5s 0.1s, padding-left var(--side_bar_spread_time) ease, width var(--side_bar_spread_time) ease;
     }
@@ -68,7 +68,7 @@
     
     #main_side_bar:hover {
         left: 0px;
-        transition: left 0.5s 0.1s;
+        transition: left 0.5s 0.1s, top 0.5s ease;
     }
 
     #main_side_bar:hover::after {

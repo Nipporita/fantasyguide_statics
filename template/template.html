@@ -186,6 +186,10 @@
                     <a class="close_menu" href="###"></a>
                     <div id="main_side_bar_mask"></div>
                 </div>
+                <div class="left_padding_div">
+                    <div id="main_content_container" class="top_padding_div">
+                    </div>
+                </div>
             </div>
             <div id="footer_wrap">
             </div>
@@ -236,6 +240,7 @@
 
             var main_side_bar = document.getElementById("main_side_bar");
             var main_content = document.getElementById("main_content")
+            var main_content_padding_left = document.querySelector(".left_padding_div");
 
             main_content.classList.add("on_load")
 
@@ -250,6 +255,9 @@
 
                 if (main_content) {
                     main_content.classList.add("main_content_shrink");
+                }
+                if (main_content_padding_left) {
+                    main_content_padding_left.classList.add("main_content_padding_left_shrink");
                 }
 
                 var other_chunks = document.querySelectorAll("#main_side_bar > .fantasy_guide_div_1");
@@ -269,7 +277,9 @@
                 if (main_content) {
                     main_content.classList.remove("main_content_shrink")
                 }
-                
+                if (main_content_padding_left) {
+                    main_content_padding_left.classList.remove("main_content_padding_left_shrink");
+                }
 
                 var other_chunks = document.querySelectorAll("#main_side_bar > .fantasy_guide_div_1");
                 other_chunks.forEach(function (element) {

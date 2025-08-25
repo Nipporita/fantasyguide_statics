@@ -160,12 +160,12 @@ button:hover {
 }
 
 #main_content {
-    width: calc(100% - 12rem - 5% - 100px);
+    width: calc(100vw - 12rem - 5vw - 100px);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: calc(12rem + 5% + 80px);
-    padding-top: calc(140rem / 16 + 40px + 0.667px);
+    padding-left: 0;
+    padding-top: 0;
     padding-right: 20px;
     align-content: flex-start;
     justify-content: space-evenly;
@@ -173,7 +173,7 @@ button:hover {
 }
 
 #main_content.on_load {
-    transition: padding-left var(--side_bar_spread_time) ease, width var(--side_bar_spread_time) ease;
+    transition: width var(--side_bar_spread_time) ease;
     min-height: calc(100vh - 140rem / 16 - 60px - 0.667px - var(--bottom-offset));
     overflow: hidden;
 }
@@ -181,7 +181,7 @@ button:hover {
 @media (min-width: 769px) {
     .main_content_shrink#main_content {
         width: calc(50vw);
-        padding-left: calc(50vw - 40px);
+        /* padding-left: calc(50vw - 40px); */
     }
 }
 
@@ -1667,4 +1667,17 @@ div#omikuji_ability {
 
 div#omikuji_fortune {
     line-height: calc(1.7 * 2.7vh);
+}
+
+.left_padding_div {
+    transition: padding-left var(--side_bar_spread_time) ease;
+    padding-left: calc(12rem + 5vw + 80px);
+}
+
+.top_padding_div {
+    padding-top: calc(140rem / 16 + 40px + 0.667px);
+}
+
+.left_padding_div.main_content_padding_left_shrink {
+    padding-left: calc(50vw - 40px);
 }
