@@ -166,7 +166,7 @@ button:hover {
     flex-wrap: wrap;
     padding-left: 0;
     padding-top: 0;
-    padding-right: 20px;
+    padding-right: 0;
     align-content: flex-start;
     justify-content: space-evenly;
     align-items: center;
@@ -1672,6 +1672,7 @@ div#omikuji_fortune {
 .left_padding_div {
     transition: padding-left var(--side_bar_spread_time) ease;
     padding-left: calc(12rem + 5vw + 80px);
+    padding-right: 20px;
 }
 
 .top_padding_div {
