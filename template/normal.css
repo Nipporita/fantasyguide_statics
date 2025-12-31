@@ -12,6 +12,10 @@ body {
     --uni-anti-background-color: black;
     --uni-anti-text-color: white;
 
+    --uni-light-gray-color: lightgray;
+    --uni-gray-color: gray;
+    --uni-dark-gray-color: rgb(86, 86, 86);
+
     --fantasy-guide-div-1-border-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/border_image_1_white.png");
     --fantasy-guide-div-1-button-border-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/border_image_1.png");
 
@@ -33,6 +37,10 @@ body.dark {
     
     --uni-anti-background-color: #fdfdfd;
     --uni-anti-text-color: #222;
+
+    --uni-light-gray-color: rgb(86, 86, 86);
+    --uni-gray-color: gray;
+    --uni-dark-gray-color: lightgray;
 
     --fantasy-guide-div-1-border-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/border_image_1_white_dark.png");
     --fantasy-guide-div-1-button-border-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/border_image_1_dark.png");

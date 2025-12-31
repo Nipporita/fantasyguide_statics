@@ -64,8 +64,11 @@ Copy from http://etinjat.wikidot.com/typeface-cn
 ==============================
 */
 
-@font-face { font-family: '仓耳与墨W03'; 
-    font-style: normal; font-weight: 400;font-display: swap;
+@font-face {
+    font-family: '仓耳与墨W03';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
     src: url('https://fastly.jsdelivr.net/gh/Etinjat/FONT@Tsanger/仓耳与墨W03.woff2') format('woff2');
 }
 
@@ -77,8 +80,10 @@ Copy from http://etinjat.wikidot.com/typeface-cn
 ==============================
 */
 
-@font-face { font-family:'LXGW WenKai'; 
-    font-style: normal; font-display: swap;
+@font-face {
+    font-family: 'LXGW WenKai';
+    font-style: normal;
+    font-display: swap;
     src: url('https://fastly.jsdelivr.net/gh/Etinjat/Fonts@main/FONT_LXGWWenKaiMono-Regular.woff2') format('woff2');
 }
 
@@ -87,9 +92,11 @@ Copy from http://etinjat.wikidot.com/typeface-cn
     0% {
         transform: rotate(-15deg);
     }
+
     50% {
         transform: rotate(15deg);
     }
+
     100% {
         transform: rotate(-15deg);
     }
@@ -99,12 +106,15 @@ Copy from http://etinjat.wikidot.com/typeface-cn
     0% {
         opacity: 1;
     }
+
     10% {
         opacity: 0;
     }
+
     70% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -116,8 +126,7 @@ Copy from http://etinjat.wikidot.com/typeface-cn
     --posX: calc(50% - 170px - 12rem);
     --fnTransition: 0.3s;
     --fnLinger: 0.15s;
-    --fnInteract: calc(var(
-    --fnTransition) + var(--fnLinger));
+    --fnInteract: calc(var(--fnTransition) + var(--fnLinger));
 
     --container_background_size: calc(80em / 16);
 
@@ -209,15 +218,15 @@ button:hover {
     box-sizing: border-box;
 }
 
-#header h1, 
-#header h2, 
-#header h3, 
-#header h4, 
-#header h5, 
+#header h1,
+#header h2,
+#header h3,
+#header h4,
+#header h5,
 #header h6 {
     display: flex;
     margin-block: 0;
-    text-shadow: 0 0 4px rgb(255,255,255);
+    text-shadow: 0 0 4px rgb(255, 255, 255);
     filter: drop-shadow(0px 0px 3px white);
     font-family: "Kaisei Tokumin", Arial, Helvetica, sans-serif;
     color: black;
@@ -240,10 +249,10 @@ button:hover {
     /* aspect-ratio: 1 / 3.1415926; */
     width: calc(70vh / 3.1415926);
     height: 70vh;
-    background: white;
+    background: var(--uni-background-color);
     right: 20%;
     z-index: 1000;
-    box-shadow: 0px 0px 4px 2px rgba(0,0,0,1);
+    box-shadow: 0px 0px 4px 2px var(--nav-bar-shadow-color);
     flex-direction: column;
     font-size: 0.9vh;
     /* background: linear-gradient(0deg, red, white, red, white, red, white, red); */
@@ -265,6 +274,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    line-height: 1.2;
 }
 
 .login_wrap::after {
@@ -279,7 +289,7 @@ button:hover {
     background-size: 100%;
     aspect-ratio: 260/150;
     height: 70%;
-    
+
     --image-mask: linear-gradient(270deg, transparent 0%, rgba(0, 0, 0, 0.4) 60%, black);
     mask-image: var(--image-mask);
     mask-position: right center;
@@ -392,7 +402,7 @@ button:hover {
     display: block;
     position: absolute;
     height: 70.7%;
-    width: 70.7%; 
+    width: 70.7%;
 }
 
 .user_menu {
@@ -404,6 +414,7 @@ button:hover {
     opacity: 0;
     transition: opacity 0.6s ease-in-out 0.2s;
     color: black;
+    line-height: 1;
 }
 
 .user_menu_block {
@@ -429,7 +440,7 @@ button:hover {
     font-size: 1.3rem;
 }
 
-.user_profile:hover + .user_menu ,
+.user_profile:hover+.user_menu,
 .user_menu:hover {
     opacity: 1;
     transition: opacity 0.4s ease-in-out 0s;
@@ -438,33 +449,40 @@ button:hover {
 .user_menu .user_menu_block:nth-child(1) {
     --count: 1;
 }
+
 .user_menu .user_menu_block:nth-child(2) {
     --count: 2.5;
 }
+
 .user_menu .user_menu_block:nth-child(3) {
     --count: 4;
 }
+
 .user_menu .user_menu_block:nth-child(4) {
     --count: 5.5;
 }
 
-.user_profile:hover + .user_menu .user_menu_block,
+.user_profile:hover+.user_menu .user_menu_block,
 .user_menu:hover .user_menu_block {
     top: calc(140rem/16/2 * var(--count));
 }
-.user_profile:hover + .user_menu .user_menu_block:nth-child(1),
+
+.user_profile:hover+.user_menu .user_menu_block:nth-child(1),
 .user_menu:hover .user_menu_block:nth-child(1) {
     --count: 1;
 }
-.user_profile:hover + .user_menu .user_menu_block:nth-child(2),
+
+.user_profile:hover+.user_menu .user_menu_block:nth-child(2),
 .user_menu:hover .user_menu_block:nth-child(2) {
     --count: 2;
 }
-.user_profile:hover + .user_menu .user_menu_block:nth-child(3),
+
+.user_profile:hover+.user_menu .user_menu_block:nth-child(3),
 .user_menu:hover .user_menu_block:nth-child(3) {
     --count: 3;
 }
-.user_profile:hover + .user_menu .user_menu_block:nth-child(4),
+
+.user_profile:hover+.user_menu .user_menu_block:nth-child(4),
 .user_menu:hover .user_menu_block:nth-child(4) {
     --count: 4;
 }
@@ -478,7 +496,7 @@ button:hover {
 
 .user_menu_block a,
 .user_menu_block a:visited,
-.user_menu_block a:active{
+.user_menu_block a:active {
     text-decoration: none;
     color: var(--uni-text-color);
     color: black;
@@ -523,23 +541,22 @@ button:hover {
     text-decoration: none;
 }
 
-#nav_bar > a {
+#nav_bar>a {
     position: absolute;
     width: 50px;
     text-align: center;
-    transform: translate(0px, 0px);
 }
 
-body.dark #nav_bar > a {
+body.dark #nav_bar>a {
     /* transform: translate(0px, -4px); */
 }
 
-#nav_bar > a::before {
+#nav_bar>a::before {
     content: "🌚︎";
     font-size: 0.9em;
 }
 
-body.dark #nav_bar > a::before {
+body.dark #nav_bar>a::before {
     content: "🌞︎";
     font-size: 1.3em;
 }
@@ -549,7 +566,7 @@ body.dark #nav_bar > a::before {
     position: relative;
     left: 30px;
     width: 14rem;
-    margin-right: 30px; 
+    margin-right: 30px;
 }
 
 .side_bar_block {
@@ -580,7 +597,7 @@ body.dark #nav_bar > a::before {
     background-repeat: repeat;
     background-size: var(--container_background_size);
     z-index: -100;
-    --image-mask: linear-gradient(to bottom, black , transparent );
+    --image-mask: linear-gradient(to bottom, black, transparent);
     mask-image: var(--image-mask);
     -webkit-mask-image: var(--image-mask);
     -moz-mask-image: var(--image-mask);
@@ -611,7 +628,7 @@ body.dark #nav_bar > a::before {
     display: none;
 }
 
-#main_side_bar > .fantasy_guide_div_1 {
+#main_side_bar>.fantasy_guide_div_1 {
     width: calc(12rem + 5vw);
     display: flex;
     flex-direction: column;
@@ -620,16 +637,16 @@ body.dark #nav_bar > a::before {
     /* padding-top: 0.8125rem; */
     /* padding-bottom: 0.8125rem; */
     transition: width var(--side_bar_spread_time) ease,
-     opacity var(--side_bar_opacity_time) ease calc(var(--side_bar_spread_time) - var(--side_bar_opacity_time)),
-      height var(--side_bar_spread_time) ease,
-       padding var(--side_bar_spread_time) ease,
+        opacity var(--side_bar_opacity_time) ease calc(var(--side_bar_spread_time) - var(--side_bar_opacity_time)),
+        height var(--side_bar_spread_time) ease,
+        padding var(--side_bar_spread_time) ease,
         margin var(--side_bar_spread_time) ease;
     pointer-events: all;
     box-sizing: border-box;
     transform: scale(1);
 }
 
-#main_side_bar > .fantasy_guide_div_1::before {
+#main_side_bar>.fantasy_guide_div_1::before {
     position: absolute;
     width: 5rem;
     height: 5rem;
@@ -646,37 +663,46 @@ body.dark #nav_bar > a::before {
     align-items: center;
     z-index: 2;
 }
-#main_side_bar > .fantasy_guide_div_1:nth-child(1):before {
+
+#main_side_bar>.fantasy_guide_div_1:nth-child(1):before {
     content: "☵";
 }
-#main_side_bar > .fantasy_guide_div_1:nth-child(2):before {
+
+#main_side_bar>.fantasy_guide_div_1:nth-child(2):before {
     content: "☷";
 }
-#main_side_bar > .fantasy_guide_div_1:nth-child(3):before {
+
+#main_side_bar>.fantasy_guide_div_1:nth-child(3):before {
     content: "☳";
 }
-#main_side_bar > .fantasy_guide_div_1:nth-child(4):before {
+
+#main_side_bar>.fantasy_guide_div_1:nth-child(4):before {
     content: "☴";
 }
-#main_side_bar > .fantasy_guide_div_1:nth-child(5):before {
+
+#main_side_bar>.fantasy_guide_div_1:nth-child(5):before {
     content: "▣";
     font-weight: bold;
     font-size: 4.1rem;
 }
-#main_side_bar > .fantasy_guide_div_1:nth-child(6):before {
+
+#main_side_bar>.fantasy_guide_div_1:nth-child(6):before {
     content: "☰";
 }
-#main_side_bar > .fantasy_guide_div_1:nth-child(7):before {
+
+#main_side_bar>.fantasy_guide_div_1:nth-child(7):before {
     content: "☱";
 }
-#main_side_bar > .fantasy_guide_div_1:nth-child(8):before {
+
+#main_side_bar>.fantasy_guide_div_1:nth-child(8):before {
     content: "☶";
 }
-#main_side_bar > .fantasy_guide_div_1:nth-child(9):before {
+
+#main_side_bar>.fantasy_guide_div_1:nth-child(9):before {
     content: "☲";
 }
 
-#main_side_bar > .fantasy_guide_div_1::after {
+#main_side_bar>.fantasy_guide_div_1::after {
     content: " ";
     position: absolute;
     width: calc(110rem / 16);
@@ -691,16 +717,16 @@ body.dark #nav_bar > a::before {
     transition: opacity var(--side_bar_opacity_time) ease, visibility var(--side_bar_opacity_time) ease, left var(--side_bar_spread_time) ease, top var(--side_bar_spread_time) ease;
     animation: swing 10s infinite;
     pointer-events: none;
-    filter:grayscale(1);
+    filter: grayscale(1);
     z-index: 1;
 }
 
-#main_side_bar > .fantasy_guide_div_1:hover::after {
+#main_side_bar>.fantasy_guide_div_1:hover::after {
     opacity: 1;
     visibility: visible;
 }
 
-#main_side_bar > .fantasy_guide_div_1 > h1:first-child {
+#main_side_bar>.fantasy_guide_div_1>h1:first-child {
     font-size: 2.5rem;
     margin-left: 2.75rem;
     margin-top: 1.4375rem;
@@ -708,18 +734,18 @@ body.dark #nav_bar > a::before {
     flex-shrink: 0;
 }
 
-#main_side_bar > .fantasy_guide_div_1 > a > hr {
+#main_side_bar>.fantasy_guide_div_1>a>hr {
     margin-top: 0px;
     margin-bottom: 0px;
-    transition: width var(--side_bar_spread_time) ease  var(--side_bar_spread_delay);
+    transition: width var(--side_bar_spread_time) ease var(--side_bar_spread_delay);
     background-color: #e7e7e7;
 }
 
-#main_side_bar > .fantasy_guide_div_1 > a.closed_yin_yang > hr {
+#main_side_bar>.fantasy_guide_div_1>a.closed_yin_yang>hr {
     transition: width var(--side_bar_spread_time) ease 0s;
 }
 
-#main_side_bar > .fantasy_guide_div_1 > a {
+#main_side_bar>.fantasy_guide_div_1>a {
     height: calc(50rem / 16);
     display: flex;
     flex-direction: column;
@@ -734,29 +760,27 @@ body.dark #nav_bar > a::before {
     width: 0;
 }
 
-#main_side_bar > .fantasy_guide_div_1 a.closed_yin_yang hr::before {
+#main_side_bar>.fantasy_guide_div_1 a.closed_yin_yang hr::before {
     left: calc(50% - 17rem / 16);
-    transition: left var(--side_bar_spread_time) ease  var(--side_bar_spread_delay), top var(--side_bar_spread_time) ease  var(--side_bar_spread_delay);
+    transition: left var(--side_bar_spread_time) ease var(--side_bar_spread_delay), top var(--side_bar_spread_time) ease var(--side_bar_spread_delay);
 }
 
-#main_side_bar > .fantasy_guide_div_1 a.closed_yin_yang hr::after {
+#main_side_bar>.fantasy_guide_div_1 a.closed_yin_yang hr::after {
     right: calc(50% - 19.6rem / 16);
-    transition: right var(--side_bar_spread_time) ease  var(--side_bar_spread_delay), top var(--side_bar_spread_time) ease  var(--side_bar_spread_delay);
+    transition: right var(--side_bar_spread_time) ease var(--side_bar_spread_delay), top var(--side_bar_spread_time) ease var(--side_bar_spread_delay);
 }
 
-#main_side_bar > .fantasy_guide_div_1 > a > hr::before{
+#main_side_bar>.fantasy_guide_div_1>a>hr::before {
     transition: left var(--side_bar_spread_time) ease 0s, top var(--side_bar_spread_time) ease 0s;
-    transform: translate(0px);
     top: calc(92.05rem / 16);
 }
 
-#main_side_bar > .fantasy_guide_div_1 > a > hr::after{
+#main_side_bar>.fantasy_guide_div_1>a>hr::after {
     transition: right var(--side_bar_spread_time) ease 0s, top var(--side_bar_spread_time) ease 0s;
-    transform: translate(0);
     top: calc(92.5rem / 16);
 }
 
-#main_side_bar > .disappear {
+#main_side_bar>.disappear {
     opacity: 0;
     visibility: hidden;
     height: 0px;
@@ -767,40 +791,40 @@ body.dark #nav_bar > a::before {
     transform: scale(0);
 }
 
-#main_side_bar > .disappear > a {
+#main_side_bar>.disappear>a {
     height: 0px;
 }
 
-#main_side_bar > .to_left_top {
+#main_side_bar>.to_left_top {
     height: calc(100vh - 140rem / 16 - 21px - 0.667px - 110px);
     width: calc(50vw - 100rem / 16);
     flex-shrink: 0;
 }
 
-#main_side_bar > .to_left_top::after{
+#main_side_bar>.to_left_top::after {
     left: calc(-16px - 0.9375rem);
     top: calc(-14px - 0.9375rem);
     opacity: 1;
     animation: swing 10s infinite, disappear_and_back calc(var(--side_bar_spread_time) * 4 / 3) 1;
 }
 
-#main_side_bar > .back_from_left_top {
+#main_side_bar>.back_from_left_top {
     flex-shrink: 0;
 }
 
-#main_side_bar > .back_from_left_top::after,
-#main_side_bar > .back_from_left_top:hover::after{
+#main_side_bar>.back_from_left_top::after,
+#main_side_bar>.back_from_left_top:hover::after {
     left: calc(50% - 3.375rem);
     top: calc(56.5rem / 16);
     opacity: 0;
     animation: swing 10s infinite;
 }
 
-#main_side_bar > *:nth-last-child(3) {
+#main_side_bar>*:nth-last-child(3) {
     margin-bottom: 250px;
 }
 
-#main_side_bar.side_bar_is_open > .fantasy_guide_div_1:nth-last-child(3) {
+#main_side_bar.side_bar_is_open>.fantasy_guide_div_1:nth-last-child(3) {
     margin-bottom: 0px;
 }
 
@@ -819,7 +843,7 @@ body.dark #nav_bar > a::before {
     justify-content: center;
     flex-direction: row;
     overflow: hidden;
-    transform: translate(0px, calc(-25rem / 16));
+    transform: translate(0px, calc(-50rem / 16));
 }
 
 .main_content_content {
@@ -830,13 +854,13 @@ body.dark #nav_bar > a::before {
     aspect-ratio: 1;
     overflow-y: auto;
     opacity: 1;
-    transition: opacity var(--side_bar_spread_time) ease, aspect-ratio var(--side_bar_spread_time) ease, width var(--side_bar_spread_time) ease  var(--side_bar_spread_delay);
+    transition: opacity var(--side_bar_spread_time) ease, aspect-ratio var(--side_bar_spread_time) ease, width var(--side_bar_spread_time) ease var(--side_bar_spread_delay);
     background-color: #e7e7e7;
     padding-top: calc(25rem / 16);
     color: black;
 }
 
-#main_side_bar > div > a.closed_yin_yang + .main_content_container > .main_content_content {
+#main_side_bar>div>a.closed_yin_yang+.main_content_container>.main_content_content {
     opacity: 0;
     aspect-ratio: 1/0.027438934775579793;
     /*height: 0%;*/
@@ -862,8 +886,8 @@ body.dark #nav_bar > a::before {
     top: 0;
     left: 0;
     opacity: 0;
-    -webkit-transition: opacity  var(--side_bar_mask_opacity_time) cubic-bezier(0.5, 1, 0.89, 1);
-    transition: opacity  var(--side_bar_mask_opacity_time) cubic-bezier(0.5, 1, 0.89, 1);
+    -webkit-transition: opacity var(--side_bar_mask_opacity_time) cubic-bezier(0.5, 1, 0.89, 1);
+    transition: opacity var(--side_bar_mask_opacity_time) cubic-bezier(0.5, 1, 0.89, 1);
     background: #fff;
     width: 100%;
     height: 100%;
@@ -888,8 +912,8 @@ body.dark #nav_bar > a::before {
 
 .side_bar_is_open #main_side_bar_mask {
     opacity: 1;
-    -webkit-transition: opacity  var(--side_bar_mask_opacity_time) cubic-bezier(0.5, 1, 0.89, 1);
-    transition: opacity  var(--side_bar_mask_opacity_time) cubic-bezier(0.5, 1, 0.89, 1);
+    -webkit-transition: opacity var(--side_bar_mask_opacity_time) cubic-bezier(0.5, 1, 0.89, 1);
+    transition: opacity var(--side_bar_mask_opacity_time) cubic-bezier(0.5, 1, 0.89, 1);
 }
 
 .side_bar_is_open #main_side_bar_mask::before {
@@ -898,7 +922,7 @@ body.dark #nav_bar > a::before {
     background-position: 0 0;
 }
 
-.about_link li{
+.about_link li {
     font-size: 1.5rem;
     background-color: #e7e7e7;
     height: 4rem;
@@ -942,8 +966,7 @@ ul.about_link {
     right: 10px;
     background: black;
     content: "";
-    --image-mask: url(
-    https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/right_arrow.svg);
+    --image-mask: url(https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/right_arrow.svg);
     -webkit-mask-image: var(--image-mask);
     -webkit-mask-position: center;
     -webkit-mask-size: 1.5rem;
@@ -963,8 +986,8 @@ ul.about_link {
 }
 
 .powered_by {
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
     font-family: "Kaisei Tokumin", Arial, Helvetica, sans-serif;
     font-weight: bold;
     justify-content: center;
@@ -985,8 +1008,10 @@ footer {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     background-image: var(--footer-background-image);
-    background-size: 100% 100%; /* 背景大小与视口一致 */
-    background-repeat: no-repeat; /* 禁止平铺 */
+    background-size: 100% 100%;
+    /* 背景大小与视口一致 */
+    background-repeat: no-repeat;
+    /* 禁止平铺 */
     padding-top: 3rem;
     z-index: 10;
     pointer-events: none;
@@ -1035,15 +1060,15 @@ span.fnnum:hover {
     visibility: hidden;
     opacity: 0;
     z-index: 9;
-    transition: opacity 0.15s linear var(--fnLinger), right var(--fnTransition) cubic-bezier(.08,.72,.5,.94) var(--fnLinger), visibility 0.01s linear var(--fnInteract);
+    transition: opacity 0.15s linear var(--fnLinger), right var(--fnTransition) cubic-bezier(.08, .72, .5, .94) var(--fnLinger), visibility 0.01s linear var(--fnInteract);
 }
 
-.fnnum:hover + span.fncon {
+.fnnum:hover+span.fncon {
     opacity: 1;
     z-index: 10;
     right: var(--posX);
     visibility: visible;
-    transition: opacity 0.15s linear, right var(--fnTransition) cubic-bezier(.08,.72,.5,.94);
+    transition: opacity 0.15s linear, right var(--fnTransition) cubic-bezier(.08, .72, .5, .94);
 }
 
 /* 预设样式 */
@@ -1058,7 +1083,7 @@ span.fnnum:hover {
     background: var(--uni-background-color);
     padding: 0.8125rem 1.4375rem;
     margin: 7px;
-    box-shadow: 0px 0px 11px 3px rgba(0,0,0,0.8);
+    box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.8);
     color: var(--uni-text-color) !important;
 }
 
@@ -1078,7 +1103,13 @@ div.fantasy_guide_div_1 {
     color: var(--uni-text-color);
 }
 
-.main_content_content h1, .main_content_content h2, .main_content_content h3, .main_content_content h4, .main_content_content h5, .main_content_content h6, .main_content_content span {
+.main_content_content h1,
+.main_content_content h2,
+.main_content_content h3,
+.main_content_content h4,
+.main_content_content h5,
+.main_content_content h6,
+.main_content_content span {
     color: black;
 }
 
@@ -1100,8 +1131,7 @@ div.fantasy_guide_div_1 {
     width: calc(28rem / 16);
     margin: 0;
     background-color: var(--uni-anti-background-color);
-    --image-mask: url(
-    "https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/Yin.svg");
+    --image-mask: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/Yin.svg");
     -webkit-mask-image: var(--image-mask);
     -webkit-mask-position: center;
     -webkit-mask-size: 1.25rem;
@@ -1130,8 +1160,7 @@ div.fantasy_guide_div_1 {
     width: calc(28rem / 16);
     margin: 0;
     background-color: var(--uni-anti-background-color);
-    --image-mask: url(
-    "https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/Yang.svg");
+    --image-mask: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/Yang.svg");
     -webkit-mask-image: var(--image-mask);
     -webkit-mask-position: center;
     -webkit-mask-size: 1.25rem;
@@ -1169,7 +1198,7 @@ div.fantasy_guide_div_1 {
 }
 
 .fantasy_guide_div_1 a:active {
-    color: gray;
+    color: var(--uni-gray-color);
 }
 
 .button {
@@ -1178,35 +1207,39 @@ div.fantasy_guide_div_1 {
 
 /* 显示与隐藏按钮 */
 
+.click_button,
 .hide_and_show_button {
     cursor: pointer;
     color: var(--uni-text-color);
     text-decoration: none;
 }
 
+.click_button:hover,
 .hide_and_show_button:hover {
     text-decoration: underline;
 }
 
+.click_button:visited,
 .hide_and_show_button:visited {
     color: var(--uni-text-color);
 }
 
+.click_button:active,
 .hide_and_show_button:active {
-    color: gray;
+    color: var(--uni-gray-color);
 }
 
 .hidden_block {
     display: none;
 }
 
-.sukima > * {
+.sukima>* {
     display: flex;
     align-items: center;
 }
 
-.sukima > *::before {
-    content:"";
+.sukima>*::before {
+    content: "";
     display: block;
     width: 3em;
     height: 1em;
@@ -1216,11 +1249,11 @@ div.fantasy_guide_div_1 {
     background-size: contain;
 }
 
-.sukima_close > *::before {
+.sukima_close>*::before {
     background-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/sukima_close.svg");
 }
 
-.sukima_open > *::before {
+.sukima_open>*::before {
     background-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/sukima_open.svg");
 }
 
@@ -1231,7 +1264,7 @@ div.fantasy_guide_div_1 {
 }
 
 /* 小手机 */
-@media (max-width: 768px)  {
+@media (max-width: 768px) {
 
     .mobile_header {
         display: block;
@@ -1249,7 +1282,7 @@ div.fantasy_guide_div_1 {
         width: 100%;
     }
 
-    #side_bar{
+    #side_bar {
         display: block;
         position: fixed;
         top: 0;
@@ -1266,7 +1299,7 @@ div.fantasy_guide_div_1 {
         transition: left .5s ease-in-out .1s;
     }
 
-    #main_side_bar{
+    #main_side_bar {
         display: flex;
         position: fixed;
         top: 0px;
@@ -1277,15 +1310,15 @@ div.fantasy_guide_div_1 {
         z-index: 30;
         margin-left: 0;
         padding: 1em 1em 0em;
-        -webkit-transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height  var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
-        -moz-transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height  var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
-        -ms-transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height  var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
-        -o-transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height  var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
-        transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height  var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
+        -webkit-transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
+        -moz-transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
+        -ms-transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
+        -o-transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
+        transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
         pointer-events: none;
     }
 
-    #main_side_bar > .fantasy_guide_div_1 {
+    #main_side_bar>.fantasy_guide_div_1 {
         padding-right: 1.4375rem;
     }
 
@@ -1337,7 +1370,7 @@ div.fantasy_guide_div_1 {
         height: 100%;
         top: 0;
         left: 0;
-        background-color: rgba(0,0,0,.3);
+        background-color: rgba(0, 0, 0, .3);
         z-index: -1;
         pointer-events: all;
     }
@@ -1352,7 +1385,7 @@ div.fantasy_guide_div_1 {
         border-style: solid;
     }
 
-    #main_side_bar > .fantasy_guide_div_1 {
+    #main_side_bar>.fantasy_guide_div_1 {
         width: calc(12rem + 12vw);
         z-index: 20;
     }
@@ -1366,7 +1399,7 @@ div.fantasy_guide_div_1 {
         aspect-ratio: 1/3;
     }
 
-    .about_link span{
+    .about_link span {
         font-size: 16px;
     }
 
@@ -1379,15 +1412,16 @@ div.fantasy_guide_div_1 {
     }
 
     .login_wrap::after {
-        --image-mask: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.1) 33%, black);;
+        --image-mask: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.1) 33%, black);
+        ;
         right: calc(-1px + 140rem / 16 / 2 + 0.667px);
     }
 
     .omikuji_wrap {
-        
-right: calc(50vw - 70vh / 3.1415926 / 2);
-        
-top: calc(-68vh + 140rem / 16 + 20px);
+
+        right: calc(50vw - 70vh / 3.1415926 / 2);
+
+        top: calc(-68vh + 140rem / 16 + 20px);
     }
 }
 
@@ -1406,7 +1440,7 @@ top: calc(-68vh + 140rem / 16 + 20px);
 .omikuji_number_wrap {
     margin: 2.5vh;
     padding: 0.6vh;
-    background: lightgray;
+    background: var(--uni-light-gray-color);
     flex-shrink: 0;
     flex-grow: 0;
     height: calc(70vh / 6 - 2 * 3.1vh);
@@ -1414,10 +1448,11 @@ top: calc(-68vh + 140rem / 16 + 20px);
     flex-direction: row;
     align-items: stretch;
     justify-content: center;
+    color: var(--uni-text-color);
 }
 
 .omikuji_number {
-    border: 0.3vh solid gray;
+    border: 0.3vh solid var(--uni-gray-color);
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
@@ -1430,8 +1465,8 @@ top: calc(-68vh + 140rem / 16 + 20px);
 .omikuji_content_wrap {
     flex-grow: 1;
     padding: 1.2vh;
-    --border-thick: 0.3vh gray solid;
-    --border-thin: 0.1vh gray solid;
+    --border-thick: 0.3vh var(--uni-gray-color) solid;
+    --border-thin: 0.1vh var(--uni-gray-color) solid;
     display: flex;
     height: calc(100% * 5 / 6);
 }
@@ -1467,6 +1502,7 @@ top: calc(-68vh + 140rem / 16 + 20px);
     border-bottom: var(--border-thin);
     flex-direction: column;
     align-items: center;
+    color: var(--uni-text-color);
 }
 
 .omikuji_omikuji {
@@ -1491,7 +1527,7 @@ div#omikuji_fan {
     right: 0.1vh;
     top: 0.1vh;
     bottom: 0.1vh;
-    border: 0.1vh solid gray;
+    border: 0.1vh solid var(--uni-gray-color);
     filter: opacity(0.5);
     pointer-events: none;
 }
@@ -1538,7 +1574,7 @@ div#omikuji_ability {
     font-weight: 500;
 }
 
-#omikuji_name_wrap > div {
+#omikuji_name_wrap>div {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1562,7 +1598,8 @@ div#omikuji_poem {
     white-space: nowrap;
 }
 
-div#omikuji_fortune_text_1, div#omikuji_fortune_text_2 {
+div#omikuji_fortune_text_1,
+div#omikuji_fortune_text_2 {
     writing-mode: vertical-rl;
     white-space: normal;
     line-height: 1;
@@ -1596,7 +1633,7 @@ div#omikuji_title {
     font-size: 1vh;
 }
 
-#omikuji_bangou_wrap > div {
+#omikuji_bangou_wrap>div {
     flex-grow: 1.3;
     display: flex;
     justify-content: center;
@@ -1625,7 +1662,7 @@ div#omikuji_bangou {
     margin: 0;
     width: 100%;
     border-width: 0.05vh;
-    border-color: lightgray;
+    border-color: var(--uni-light-gray-color);
     box-sizing: border-box;
 }
 
@@ -1681,4 +1718,125 @@ div#omikuji_fortune {
 
 .left_padding_div.main_content_padding_left_shrink {
     padding-left: calc(50vw - 40px);
+}
+
+/* hideheader */
+
+.layout--hide-header #header {
+    top: calc(-140rem/16);
+    transition: top 0.5s ease;
+}
+
+.layout--hide-header div#main_side_bar {
+    top: calc(21px + 0.667px);
+    transition: left 0.5s 0.1s, top 0.5s ease;
+}
+
+.layout--hide-header .top_padding_div {
+    padding-top: calc(40px + 0.667px);
+    transition: padding-top 0.5s ease;
+}
+
+.layout--hide-header div#main_content.on_load {
+    transition: transform 0.5s 0.1s, width var(--side_bar_spread_time) ease;
+}
+
+.layout--hide-header #header:hover {
+    top: 0;
+}
+
+.layout--hide-header #header:hover~* .top_padding_div {
+    padding-top: calc(140rem / 16 + 40px + 0.667px);
+}
+
+.layout--hide-header #header:hover~* div#main_side_bar {
+    top: calc(140rem / 16 + 21px + 0.667px);
+}
+
+.layout--hide-header .side_bar_is_open#main_side_bar+#main_content,
+.layout--hide-header #main_side_bar:hover+#main_content {
+    transition: transform 0.5s 0.1s, padding-left var(--side_bar_spread_time) ease, width var(--side_bar_spread_time) ease;
+}
+
+/* hideSidebar */
+@media (min-width: 769px) {
+    .layout--hide-sidebar #main_content {
+        transform: translate(calc(-6rem - 2.5% - 30px), 0);
+    }
+
+    .layout--hide-sidebar #main_content {
+        transition: transform 0.5s 0.5s, padding-left var(--side_bar_spread_time) ease, width var(--side_bar_spread_time) ease;
+    }
+
+    .layout--hide-sidebar .side_bar_is_open#main_side_bar~* #main_content,
+    .layout--hide-sidebar #main_side_bar:hover~* #main_content {
+        transform: translate(0, 0);
+        transition: transform 0.5s 0.1s, padding-left var(--side_bar_spread_time) ease, width var(--side_bar_spread_time) ease;
+    }
+
+    .layout--hide-sidebar #main_side_bar {
+        left: calc(-12rem - 5vw - 38px);
+        transition: left 0.5s 0.5s;
+        padding-right: 25px;
+    }
+
+    /* .side_bar_is_open#main_side_bar {
+        left: calc(-50vw + 100rem / 16 - 38px); 
+    } */
+
+    .layout--hide-sidebar #main_side_bar::after {
+        display: block;
+        position: absolute;
+        width: 30px;
+        aspect-ratio: 1/2;
+        top: calc(2 * 7.6875rem + 4 * 0.8125rem - 30px + 48px);
+        right: 0;
+        opacity: 1;
+        background: var(--uni-text-color);
+        content: "";
+        -webkit-mask-image: var(--image-mask);
+        -webkit-mask-position: center;
+        -webkit-mask-size: 30px;
+        -webkit-mask-repeat: no-repeat;
+        -moz-mask-image: var(--image-mask);
+        -moz-mask-position: center;
+        -moz-mask-size: 30px;
+        -moz-mask-repeat: no-repeat;
+        -o-mask-image: var(--image-mask);
+        -o-mask-position: center;
+        -o-mask-size: 30px;
+        -o-mask-repeat: no-repeat;
+        mask-image: var(--image-mask);
+        mask-position: center;
+        mask-size: 30px;
+        mask-repeat: no-repeat;
+        filter: blur(0px);
+        --image-mask: url("https://fantasyguide.cn/images/right_arrow.svg");
+        z-index: -1;
+        transition: opacity 0.3s calc(var(--side_bar_spread_time) - 0.3s), right var(--side_bar_spread_time) 0.5s;
+    }
+
+    .layout--hide-sidebar .side_bar_is_open#main_side_bar {
+        left: 0;
+    }
+
+    .layout--hide-sidebar .side_bar_is_open#main_side_bar::after,
+    .layout--hide-sidebar .side_bar_is_open#main_side_bar:hover::after {
+        opacity: 0;
+        transition: opacity 0.1s;
+    }
+
+    .layout--hide-sidebar #main_side_bar:hover {
+        left: 0px;
+        transition: left 0.5s 0.1s, top 0.5s ease;
+    }
+
+    .layout--hide-sidebar #main_side_bar:hover::after {
+        right: 10px;
+        transition: opacity 0.3s calc(var(--side_bar_spread_time) - 0.3s), right 0.5s 0.2s;
+    }
+}
+
+.link:hover {
+    cursor: pointer;
 }
