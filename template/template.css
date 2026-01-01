@@ -4,10 +4,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700;800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+
 /* 字体区 */
 @font-face {
     font-family: "YanSong";
     src: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/fonts/ZaoZiGongFangYanSongTi-1.otf") format("opentype");
+    font-display: swap;
 }
 
 @font-face {
@@ -22,39 +25,44 @@
 @font-face {
     font-family: "JinWenCN";
     src: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/fonts/金文體W3-GB5.TTC") format("truetype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Lyra";
     src: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/fonts/FOT-LYRA_STD_DB.OTF") format("opentype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "DYS";
     src: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/fonts/FZDYSJW.TTF") format("truetype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "ZZOldMincho";
     src: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/fonts/FZFWZhuZiAOldMinchoR.TTF") format("truetype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "JinLing";
     src: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/fonts/FZJinL-L_GBJF.TTF") format("truetype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "FZSHJW";
     src: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/fonts/FZSHJW.TTF") format("truetype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "YuMincho";
     src: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/fonts/YuMincho_+36p_Kana_Extrabold.otf") format("opentype");
+    font-display: swap;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
 
 /*
 ==============================
@@ -1263,169 +1271,6 @@ div.fantasy_guide_div_1 {
     display: none;
 }
 
-/* 小手机 */
-@media (max-width: 768px) {
-
-    .mobile_header {
-        display: block;
-        z-index: 1;
-    }
-
-    html {
-        font-size: 10px;
-    }
-
-
-    #header {
-        background-position-x: calc(6rem + 2.5vw - 50rem / 16 + 12px);
-        padding-left: calc(6rem + 2.5vw + 50rem / 16 + 7px + 10px);
-        width: 100%;
-    }
-
-    #side_bar {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: -25em;
-        width: 14rem;
-        height: 100%;
-        overflow-y: auto;
-        z-index: 10;
-        padding: 1em 1em 0;
-        -webkit-transition: left .5s ease-in-out .1s;
-        -moz-transition: left .5s ease-in-out .1s;
-        -ms-transition: left .5s ease-in-out .1s;
-        -o-transition: left .5s ease-in-out .1s;
-        transition: left .5s ease-in-out .1s;
-    }
-
-    #main_side_bar {
-        display: flex;
-        position: fixed;
-        top: 0px;
-        left: -25em;
-        width: 100%;
-        height: 100%;
-        overflow-y: auto;
-        z-index: 30;
-        margin-left: 0;
-        padding: 1em 1em 0em;
-        -webkit-transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
-        -moz-transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
-        -ms-transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
-        -o-transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
-        transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
-        pointer-events: none;
-    }
-
-    #main_side_bar>.fantasy_guide_div_1 {
-        padding-right: 1.4375rem;
-    }
-
-    .open_menu a {
-        position: fixed;
-        display: flex;
-        top: 10px;
-        left: 10px;
-        z-index: 15;
-        font-family: "AaGothic", Arial, Helvetica, sans-serif;
-        font-size: 22px;
-        width: 30px;
-        height: 30px;
-        line-height: .9em;
-        text-align: center;
-        border: .2em solid #888;
-        background-color: #fff;
-        border-radius: 3em;
-        color: #888;
-        text-decoration: none;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #main_side_bar:target {
-        top: 0;
-        display: flex;
-        left: 0;
-        width: 100%;
-        margin-left: 0;
-        z-index: 30;
-        padding-bottom: 1em;
-    }
-
-    .side_bar_is_open#main_side_bar:target {
-        top: calc((100vh - 530px) / 2);
-        height: 530px;
-    }
-
-    .close_menu {
-        display: none;
-    }
-
-    #main_side_bar:target .close_menu {
-        display: block;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, .3);
-        z-index: -1;
-        pointer-events: all;
-    }
-
-    #main_content {
-        width: 96vw;
-        padding-left: 2vw;
-        padding-right: 0vw;
-    }
-
-    .fantasy_guide_div_1 {
-        border-style: solid;
-    }
-
-    #main_side_bar>.fantasy_guide_div_1 {
-        width: calc(12rem + 12vw);
-        z-index: 20;
-    }
-
-    .side_bar_is_open#main_side_bar .fantasy_guide_div_1.to_left_top {
-        width: calc(100vw - 2em - 14px);
-        height: calc(100% - 10px);
-    }
-
-    .main_content_content {
-        aspect-ratio: 1/3;
-    }
-
-    .about_link span {
-        font-size: 16px;
-    }
-
-    #AQ {
-        max-width: 14.1rem;
-    }
-
-    .login_wrap {
-        margin-right: 0px;
-    }
-
-    .login_wrap::after {
-        --image-mask: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.1) 33%, black);
-        ;
-        right: calc(-1px + 140rem / 16 / 2 + 0.667px);
-    }
-
-    .omikuji_wrap {
-
-        right: calc(50vw - 70vh / 3.1415926 / 2);
-
-        top: calc(-68vh + 140rem / 16 + 20px);
-    }
-}
-
-
 .omikuji_hanzi {
     transform: rotate(90deg);
     aspect-ratio: 1;
@@ -1839,4 +1684,178 @@ div#omikuji_fortune {
 
 .link:hover {
     cursor: pointer;
+}
+
+/* 小手机 */
+@media (max-width: 768px) {
+
+    .mobile_header {
+        display: block;
+        z-index: 1;
+    }
+
+    html {
+        font-size: 10px;
+    }
+
+
+    #header {
+        background-position-x: calc(6rem + 2.5vw - 50rem / 16 + 12px);
+        padding-left: calc(6rem + 2.5vw + 50rem / 16 + 7px + 10px);
+        width: 100%;
+    }
+
+    #side_bar {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -25em;
+        width: 14rem;
+        height: 100%;
+        overflow-y: auto;
+        z-index: 10;
+        padding: 1em 1em 0;
+        -webkit-transition: left .5s ease-in-out .1s;
+        -moz-transition: left .5s ease-in-out .1s;
+        -ms-transition: left .5s ease-in-out .1s;
+        -o-transition: left .5s ease-in-out .1s;
+        transition: left .5s ease-in-out .1s;
+    }
+
+    #main_side_bar {
+        display: flex;
+        position: fixed;
+        top: 0px;
+        left: -25em;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        z-index: 30;
+        margin-left: 0;
+        padding: 1em 1em 0em;
+        -webkit-transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
+        -moz-transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
+        -ms-transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
+        -o-transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
+        transition: left .5s ease-in-out .1s, top var(--side_bar_spread_time) ease-in-out 0s, height var(--side_bar_spread_time) ease-in-out, padding var(--side_bar_spread_time) ease-in-out;
+        pointer-events: none;
+    }
+
+    #main_side_bar>.fantasy_guide_div_1 {
+        padding-right: 1.4375rem;
+    }
+
+    .open_menu a {
+        position: fixed;
+        display: flex;
+        top: 10px;
+        left: 10px;
+        z-index: 15;
+        font-family: "AaGothic", Arial, Helvetica, sans-serif;
+        font-size: 22px;
+        width: 30px;
+        height: 30px;
+        line-height: .9em;
+        text-align: center;
+        border: .2em solid #888;
+        background-color: #fff;
+        border-radius: 3em;
+        color: #888;
+        text-decoration: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #main_side_bar.show_mobile_side_bar {
+        top: 0;
+        display: flex;
+        left: 0;
+        width: 100%;
+        margin-left: 0;
+        z-index: 30;
+        padding-bottom: 1em;
+    }
+
+    .side_bar_is_open#main_side_bar.show_mobile_side_bar {
+        top: calc((100vh - 530px) / 2);
+        height: 530px;
+    }
+
+    .close_menu {
+        display: none;
+    }
+
+    #main_side_bar.show_mobile_side_bar .close_menu {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .3);
+        z-index: -1;
+        pointer-events: all;
+    }
+
+    #main_content {
+        width: 96vw;
+        padding-left: 2vw;
+        padding-right: 0vw;
+    }
+
+    .fantasy_guide_div_1 {
+        border-style: solid;
+    }
+
+    #main_side_bar>.fantasy_guide_div_1 {
+        width: calc(12rem + 12vw);
+        z-index: 20;
+    }
+
+    .side_bar_is_open#main_side_bar .fantasy_guide_div_1.to_left_top {
+        width: calc(100vw - 2em - 14px);
+        height: calc(100% - 10px);
+    }
+
+    .main_content_content {
+        aspect-ratio: 1/3;
+    }
+
+    .about_link span {
+        font-size: 16px;
+    }
+
+    #AQ {
+        max-width: 14.1rem;
+    }
+
+    .login_wrap {
+        margin-right: 0px;
+    }
+
+    .login_wrap::after {
+        --image-mask: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.1) 33%, black);
+        ;
+        right: calc(-1px + 140rem / 16 / 2 + 0.667px);
+    }
+
+    .omikuji_wrap {
+
+        right: calc(50vw - 70vh / 3.1415926 / 2);
+
+        top: calc(-68vh + 140rem / 16 + 20px);
+    }
+
+    .left_padding_div {
+        padding-left: 0;
+    }
+
+    .left_padding_div.main_content_padding_left_shrink {
+        padding-left: 0;
+    }
+
+    .header_content {
+        font-size: 1rem;
+    }
 }
