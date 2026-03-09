@@ -1741,6 +1741,14 @@ div#omikuji_fortune {
     background-image: var(--reality-guide-logo);
 }
 
+.layout--reality-guide {
+    --fantasy-guide-div-1-border-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/border_image_3.png");
+}
+
+body.dark .layout--reality-guide {
+    --fantasy-guide-div-1-border-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/border_image_3_white_dark.png");
+}
+
 /* hideSidebar */
 @media (min-width: 769px) {
     .layout--hide-sidebar #main_content {
