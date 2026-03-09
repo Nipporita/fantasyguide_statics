@@ -159,6 +159,7 @@ body {
     padding: 0;
     background-color: var(--uni-background-color);
     --fantasy-guide-logo: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/touhouFantasyGuideLOGO.svg");
+    --reality-guide-logo: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/touhouRealityGuideLOGO.svg");
     --bottom-offset: 40px;
 }
 
@@ -1083,7 +1084,7 @@ span.fnnum:hover {
 /* fantasy_guide_div_1 */
 .fantasy_guide_div_1 {
     font-family: Arial, Helvetica, sans-serif;
-    border-image: var(--fantasy-guide-div-1-border-image);
+    border-image: var(--reality-guide-div-1-border-image);
     border-image-repeat: stretch;
     border-image-slice: 36;
     border-image-width: 14px;
@@ -1206,6 +1207,139 @@ div.fantasy_guide_div_1 {
 }
 
 .fantasy_guide_div_1 a:active {
+    color: var(--uni-gray-color);
+}
+
+.button {
+    cursor: pointer;
+}
+
+/* fantasy_guide_div_1 */
+.reality_guide_div_1 {
+    font-family: Arial, Helvetica, sans-serif;
+    border-image: var(--fantasy-guide-div-1-border-image);
+    border-image-repeat: stretch;
+    border-image-slice: 36;
+    border-image-width: 14px;
+    border-image-outset: 7px;
+    background: var(--uni-background-color);
+    padding: 0.8125rem 1.4375rem;
+    margin: 7px;
+    box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.8);
+    color: var(--uni-text-color) !important;
+}
+
+div.reality_guide_div_1 {
+    position: relative;
+}
+
+.reality_guide_div_1 h1,
+.reality_guide_div_1 h2,
+.reality_guide_div_1 h3,
+.reality_guide_div_1 h4,
+.reality_guide_div_1 h5,
+.reality_guide_div_1 h6,
+.reality_guide_div_1 span {
+    font-family: "YanSong", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: var(--uni-text-color);
+}
+
+.main_content_content h1,
+.main_content_content h2,
+.main_content_content h3,
+.main_content_content h4,
+.main_content_content h5,
+.main_content_content h6,
+.main_content_content span {
+    color: black;
+}
+
+.reality_guide_div_1 hr {
+    width: calc(100% - 45rem / 16 - 14px) !important;
+    margin: calc(25rem / 16) auto calc(25rem / 16) !important;
+    color: var(--uni-text-color) !important;
+    height: 0.7px !important;
+    background: var(--uni-anti-background-color) !important;
+    border: none !important;
+}
+
+.reality_guide_div_1 hr::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: calc(23rem / 16);
+    height: calc(39rem / 16);
+    width: calc(28rem / 16);
+    margin: 0;
+    background-color: var(--uni-anti-background-color);
+    --image-mask: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/Yin.svg");
+    -webkit-mask-image: var(--image-mask);
+    -webkit-mask-position: center;
+    -webkit-mask-size: 1.25rem;
+    -webkit-mask-repeat: no-repeat;
+    -moz-mask-image: var(--image-mask);
+    -moz-mask-position: center;
+    -moz-mask-size: 1.25rem;
+    -moz-mask-repeat: no-repeat;
+    -o-mask-image: var(--image-mask);
+    -o-mask-position: center;
+    -o-mask-size: 1.25rem;
+    -o-mask-repeat: no-repeat;
+    mask-image: var(--image-mask);
+    mask-position: center;
+    mask-size: 1.25rem;
+    mask-repeat: no-repeat;
+    transform: translate(0px, -18.9px);
+}
+
+.reality_guide_div_1 hr::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: calc(23rem / 16);
+    height: calc(39rem / 16);
+    width: calc(28rem / 16);
+    margin: 0;
+    background-color: var(--uni-anti-background-color);
+    --image-mask: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/Yang.svg");
+    -webkit-mask-image: var(--image-mask);
+    -webkit-mask-position: center;
+    -webkit-mask-size: 1.25rem;
+    -webkit-mask-repeat: no-repeat;
+    -moz-mask-image: var(--image-mask);
+    -moz-mask-position: center;
+    -moz-mask-size: 1.25rem;
+    -moz-mask-repeat: no-repeat;
+    -o-mask-image: var(--image-mask);
+    -o-mask-position: center;
+    -o-mask-size: 1.25rem;
+    -o-mask-repeat: no-repeat;
+    mask-image: var(--image-mask);
+    mask-position: center;
+    mask-size: 1.25rem;
+    mask-repeat: no-repeat;
+    transform: translate(0px, -18.9px);
+}
+
+.reality_guide_div_1 button {
+    min-width: calc(4rem + 20px);
+    font-family: 'YanSong', Arial, Helvetica, sans-serif;
+    border-image: var(--fantasy-guide-div-1-button-border-image);
+    border-image-repeat: stretch;
+    border-image-slice: 36;
+    border-image-width: 10px;
+}
+
+.reality_guide_div_1 a {
+    color: var(--uni-text-color);
+}
+
+.reality_guide_div_1 a:visited {
+    color: var(--uni-text-color);
+}
+
+.reality_guide_div_1 a:active {
     color: var(--uni-gray-color);
 }
 
@@ -1603,6 +1737,10 @@ div#omikuji_fortune {
     transition: transform 0.5s 0.1s, padding-left var(--side_bar_spread_time) ease, width var(--side_bar_spread_time) ease;
 }
 
+.layout--reality-guide #header {
+    background-image: var(--reality-guide-logo);
+}
+
 /* hideSidebar */
 @media (min-width: 769px) {
     .layout--hide-sidebar #main_content {
@@ -1685,6 +1823,20 @@ div#omikuji_fortune {
 .link:hover {
     cursor: pointer;
 }
+
+
+.fantasy_guide_div_2 {
+    position: relative;
+    overflow: hidden;
+    background: var(--uni-anti-background-color);
+    color: var(--uni-anti-text-color);
+    padding: 2rem;
+    box-shadow: inset 0px 0px 0.25rem 0.25rem var(--uni-background-color);
+}
+
+
+/*   通常CSS的最末尾     */
+
 
 /* 小手机 */
 @media (max-width: 768px) {
