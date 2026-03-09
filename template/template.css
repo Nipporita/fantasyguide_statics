@@ -1084,7 +1084,7 @@ span.fnnum:hover {
 /* fantasy_guide_div_1 */
 .fantasy_guide_div_1 {
     font-family: Arial, Helvetica, sans-serif;
-    border-image: var(--reality-guide-div-1-border-image);
+    border-image: var(--fantasy-guide-div-1-border-image);
     border-image-repeat: stretch;
     border-image-slice: 36;
     border-image-width: 14px;
@@ -1214,10 +1214,10 @@ div.fantasy_guide_div_1 {
     cursor: pointer;
 }
 
-/* fantasy_guide_div_1 */
+/* reality_guide_div_1 */
 .reality_guide_div_1 {
     font-family: Arial, Helvetica, sans-serif;
-    border-image: var(--fantasy-guide-div-1-border-image);
+    border-image: var(--reality-guide-div-1-border-image);
     border-image-repeat: stretch;
     border-image-slice: 36;
     border-image-width: 14px;
