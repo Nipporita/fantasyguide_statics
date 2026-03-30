@@ -161,6 +161,7 @@ body {
     --fantasy-guide-logo: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/touhouFantasyGuideLOGO.svg");
     --reality-guide-logo: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/touhouRealityGuideLOGO.svg");
     --bottom-offset: 40px;
+    color: var(--uni-text-color);
 }
 
 button {
@@ -235,10 +236,10 @@ button:hover {
 #header h6 {
     display: flex;
     margin-block: 0;
-    text-shadow: 0 0 4px rgb(255, 255, 255);
-    filter: drop-shadow(0px 0px 3px white);
+    text-shadow: 0 0 4px var(--uni-anti-text-color);
+    filter: drop-shadow(0px 0px 3px var(--uni-anti-text-color));
     font-family: "Kaisei Tokumin", Arial, Helvetica, sans-serif;
-    color: black;
+    color: var(--uni-text-color);
 }
 
 .header_content {
@@ -1092,7 +1093,7 @@ span.fnnum:hover {
     background: var(--uni-background-color);
     padding: 0.8125rem 1.4375rem;
     margin: 7px;
-    box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 11px 3px var(--fantasy-guide-div-1-shadow-color);
     color: var(--uni-text-color) !important;
 }
 
@@ -1119,7 +1120,7 @@ div.fantasy_guide_div_1 {
 .main_content_content h5,
 .main_content_content h6,
 .main_content_content span {
-    color: black;
+    color: var(--uni-text-color);
 }
 
 .fantasy_guide_div_1 hr {
@@ -1741,12 +1742,12 @@ div#omikuji_fortune {
     background-image: var(--reality-guide-logo);
 }
 
-.layout--reality-guide {
-    --fantasy-guide-div-1-border-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/images/border_image_3.png");
+.layout--april-fools-2026 #header {
+    background-image: var(--april-fools-2026-logo);
 }
 
-body.dark .layout--reality-guide {
-    --fantasy-guide-div-1-border-image: url("https://cdn.jsdelivr.net/gh/Nipporita/fantasyguide_statics/border_image_3_white_dark.png");
+.layout--reality-guide {
+    --fantasy-guide-div-1-border-image: var(--reality-guide-div-1-border-image);
 }
 
 /* hideSidebar */
